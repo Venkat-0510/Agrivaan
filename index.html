@@ -43,12 +43,12 @@
 
     <!-- Loading Screen -->
     <div id="loader"
-        class="fixed inset-0 bg-white z-[100] flex items-center justify-center transition-opacity duration-500">
+        class="fixed inset-0 bg-gradient-to-br from-[#0a2f1a] via-primary to-secondary z-[100] flex items-center justify-center transition-opacity duration-500">
         <div class="flex flex-col items-center">
             <img id="loader-logo" src="logo.png" alt="Agrivaan Logo"
                 class="w-64 sm:w-80 lg:w-96 h-auto mb-8 transition-all duration-[1200ms] cubic-bezier(0.7, 0, 0.3, 1) z-[110]">
-            <div class="w-24 h-1 bg-primary/20 rounded-full overflow-hidden">
-                <div class="w-full h-full bg-primary animate-loading-bar"></div>
+            <div class="w-24 h-1 bg-white/20 rounded-full overflow-hidden">
+                <div class="w-full h-full bg-white animate-loading-bar"></div>
             </div>
         </div>
     </div>
@@ -95,14 +95,37 @@
             <button class="absolute top-8 right-8 text-primary" id="close-menu-btn">
                 <i data-lucide="x" class="w-8 h-8"></i>
             </button>
-            <a href="#hero" class="mobile-link active">Home</a>
-            <a href="#about" class="mobile-link">About</a>
-            <a href="#services" class="mobile-link">Services</a>
-            <a href="#impact" class="mobile-link">Impact</a>
-            <a href="#contact" class="mobile-link">Contact</a>
+            <div class="mb-8">
+                <div class="inline-flex items-center gap-2 bg-primary/5 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
+                    <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                    Our Presence
+                </div>
+            </div>
+            <a href="#hero" class="mobile-link">
+                <i data-lucide="home" class="w-5 h-5"></i>
+                Home
+            </a>
+            <a href="#about" class="mobile-link">
+                <i data-lucide="info" class="w-5 h-5"></i>
+                About
+            </a>
+            <a href="#services" class="mobile-link">
+                <i data-lucide="grid" class="w-5 h-5"></i>
+                Services
+            </a>
+            <a href="#impact" class="mobile-link">
+                <i data-lucide="trending-up" class="w-5 h-5"></i>
+                Impact
+            </a>
+            <a href="#contact" class="mobile-link">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+                Contact
+            </a>
             <a href="#contact"
-                class="bg-primary text-white px-8 py-5 rounded-2xl mt-6 text-center shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+                class="bg-gradient-to-r from-primary to-secondary text-white px-8 py-5 rounded-2xl mt-8 text-center shadow-lg shadow-primary/20 font-bold flex items-center justify-center gap-3 active:scale-95 transition-all">
                 Join Agrivaan
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
             </a>
         </div>
     </header>
@@ -157,8 +180,8 @@
         <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
 
         <div class="container mx-auto px-6 lg:px-12 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20 lg:mb-24">
-                <div class="reveal-left order-2 lg:order-1">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 mb-20 lg:mb-24">
+                <div class="reveal-left order-2 lg:order-1 flex flex-col justify-center">
                     <div class="flex items-center gap-3 text-primary font-bold mb-4">
                         <div class="w-12 h-0.5 bg-primary"></div>
                         OUR IDENTITY
@@ -167,9 +190,13 @@
                         Revolutionizing Indian Agriculture <span class="text-primary">Digitally</span>
                     </h2>
                     <p class="text-lg lg:text-xl text-gray-600 leading-relaxed mb-8">
-                        Agrivaan is India’s first all-in-one agriculture services platform. We are on a mission to
-                        organize the agriculture sector digitally and create a sustainable, scalable, and
-                        technology-driven rural marketplace.
+                        AGRIVAAN is an all-in-one agriculture services platform that connects farmers with machinery,
+                        seeds, fertilizers, logistics, financial support, skilled workers, and modern farming
+                        solutions in one ecosystem.<br><br>
+
+                        We operate in both B2B and B2C models, work as a sales and service partner for multiple
+                        companies, support agricultural exports, and help young farmers through training and skill
+                        development programs.
                     </p>
                     <div class="grid grid-cols-2 gap-4 lg:gap-6">
                         <div class="bg-white p-4 lg:p-6 rounded-3xl shadow-sm border border-gray-100">
@@ -184,23 +211,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="relative reveal-right order-1 lg:order-2 px-4 lg:px-0 mb-8 lg:mb-0">
-                    <div class="relative z-10 rounded-3xl lg:rounded-4xl overflow-hidden shadow-2xl">
-                        <img src="gallery6.png" alt="Digital Agriculture" class="w-full h-auto">
-                    </div>
-                    <!-- Floating Badge -->
-                    <div
-                        class="absolute -top-4 -right-4 lg:-top-6 lg:-right-6 bg-white p-4 lg:p-6 rounded-2xl lg:rounded-3xl shadow-xl z-20 animate-bounce-slow">
-                        <div class="flex items-center gap-3 lg:gap-4">
-                            <div
-                                class="w-10 h-10 lg:w-12 lg:h-12 bg-accent rounded-xl lg:rounded-2xl flex items-center justify-center text-white">
-                                <i data-lucide="award" class="w-5 h-5 lg:w-6 lg:h-6"></i>
-                            </div>
-                            <div>
-                                <div class="font-bold text-sm lg:text-base">First in India</div>
-                                <div class="text-[10px] lg:text-xs text-gray-500">Ag-Services Startup</div>
-                            </div>
-                        </div>
+                <div class="relative reveal-right order-1 lg:order-2 px-4 lg:px-0 mb-8 lg:mb-0 h-full min-h-[400px]">
+                    <div class="relative z-10 rounded-3xl lg:rounded-4xl overflow-hidden shadow-2xl h-full">
+                        <video id="about-video" src="video.mp4" muted loop playsinline
+                            class="w-full h-full object-cover"></video>
                     </div>
                 </div>
             </div>
@@ -216,8 +230,11 @@
                     <h3 class="text-2xl lg:text-3xl font-bold mb-4 lg:mb-6 group-hover:text-primary transition-colors">
                         Our Mission</h3>
                     <p class="text-gray-600 lg:text-lg leading-relaxed">
-                        Empowering farmers, supporting rural entrepreneurs, and strengthening the agricultural ecosystem
-                        in India through technology-driven solutions and direct market access.
+                        To empower farmers and rural entrepreneurs by building a unified digital agriculture ecosystem
+                        that provides easy access to machinery, seeds, fertilizers, logistics, skilled labor, financial
+                        support, training, and modern farming solutions. Agrivaan aims to simplify agricultural
+                        operations, improve productivity, create sustainable income opportunities, and strengthen
+                        India’s farming community through technology-driven innovation.
                     </p>
                     <div
                         class="mt-6 lg:mt-8 flex items-center gap-2 text-primary font-bold opacity-100 lg:opacity-0 group-hover:opacity-100 transition-all lg:translate-x-[-10px] group-hover:translate-x-0">
@@ -235,8 +252,11 @@
                         class="text-2xl lg:text-3xl font-bold mb-4 lg:mb-6 group-hover:text-secondary transition-colors">
                         Our Vision</h3>
                     <p class="text-gray-600 lg:text-lg leading-relaxed">
-                        To organize the agriculture sector digitally and create a sustainable, scalable, and
-                        technology-driven rural marketplace that benefits every stakeholder.
+                        To revolutionize Indian agriculture by creating the nation’s most trusted and scalable smart
+                        agri-platform that digitally connects farmers, agribusinesses, buyers, sellers, exporters, and
+                        service providers in one ecosystem. Agrivaan envisions a future where technology makes farming
+                        more efficient, profitable, accessible, and sustainable for every stakeholder in the
+                        agricultural sector.
                     </p>
                     <div
                         class="mt-6 lg:mt-8 flex items-center gap-2 text-secondary font-bold opacity-100 lg:opacity-0 group-hover:opacity-100 transition-all lg:translate-x-[-10px] group-hover:translate-x-0">
@@ -413,8 +433,8 @@
                         <p class="italic text-lg text-gray-700 mb-4">
                             "Founded by Sudarshan and his team to transform Indian agriculture through technology."
                         </p>
-                        <div class="flex items-center gap-4">
-                            <img src="founder.png" alt="Founder" class="w-16 h-16 rounded-full object-cover shadow-md">
+                        <div class="flex items-center gap-6">
+                            <img src="founder.png" alt="Founder" class="w-24 h-24 rounded-full object-cover shadow-md">
                             <div>
                                 <div class="font-bold text-lg">Sudarshan</div>
                                 <div class="text-primary font-medium text-sm">Founder, Agrivaan</div>
@@ -561,7 +581,7 @@
     <section class="py-24 bg-primary/5">
         <div class="container mx-auto px-6 lg:px-12">
             <h2 class="text-4xl font-bold mb-16 text-center reveal-up">What People Say</h2>
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-2 gap-8">
                 <div class="bg-white p-8 rounded-4xl shadow-sm reveal-up">
                     <div class="flex text-yellow-400 mb-4">
                         <i data-lucide="star" class="fill-current w-5 h-5"></i>
@@ -587,19 +607,6 @@
                         program is amazing. Our customer base has grown by 30% in just two months."</p>
                     <div class="font-bold text-lg">Sunita Devi</div>
                     <div class="text-sm text-primary">Vendor, Karnataka</div>
-                </div>
-                <div class="bg-white p-8 rounded-4xl shadow-sm reveal-up" style="transition-delay: 0.2s">
-                    <div class="flex text-yellow-400 mb-4">
-                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
-                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
-                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
-                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
-                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
-                    </div>
-                    <p class="text-gray-600 mb-6 italic">"Fresh vegetables delivered right to my apartment. The quality
-                        is much better than what we find in local shops."</p>
-                    <div class="font-bold text-lg">Amit Sharma</div>
-                    <div class="text-sm text-primary">Urban Consumer, Delhi</div>
                 </div>
             </div>
         </div>
@@ -653,39 +660,15 @@
                         <div class="font-bold mb-6 text-gray-400 uppercase tracking-widest text-sm">Connect Digitally
                         </div>
                         <div class="flex flex-wrap gap-4">
-                            <a href="#"
+                            <a href="https://www.facebook.com/share/1Ktxk7o4vo/" target="_blank"
                                 class="w-14 h-14 bg-gray-100 border border-gray-200 rounded-2xl flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/20">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" class="w-7 h-7">
-                                    <path
-                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                    </path>
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                                 </svg>
                             </a>
-                            <a href="#"
-                                class="w-14 h-14 bg-gray-100 border border-gray-200 rounded-2xl flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/20">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="w-7 h-7">
-                                    <path
-                                        d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
-                                    </path>
-                                </svg>
-                            </a>
-                            <a href="#"
-                                class="w-14 h-14 bg-gray-100 border border-gray-200 rounded-2xl flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/20">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="w-7 h-7">
-                                    <path
-                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
-                                    </path>
-                                    <rect x="2" y="9" width="4" height="12"></rect>
-                                    <circle cx="4" cy="4" r="2"></circle>
-                                </svg>
-                            </a>
-                            <a href="#"
+                            <a href="https://www.instagram.com/agrivaan?igsh=Mmw3cGVwdHYzejR1" target="_blank"
                                 class="w-14 h-14 bg-gray-100 border border-gray-200 rounded-2xl flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/20">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -695,13 +678,27 @@
                                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                                 </svg>
                             </a>
-                            <a href="#"
+                            <a href="https://youtube.com/@agrivaan?si=F4WCAd5yo-cWvBBY" target="_blank"
                                 class="w-14 h-14 bg-gray-100 border border-gray-200 rounded-2xl flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/20">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" class="w-7 h-7">
-                                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                                    <path
+                                        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                                    </path>
+                                    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                                </svg>
+                            </a>
+                            <a href="#" target="_blank"
+                                class="w-14 h-14 bg-gray-100 border border-gray-200 rounded-2xl flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/20">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="w-7 h-7">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                    </path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
                                 </svg>
                             </a>
                         </div>
@@ -771,6 +768,49 @@
                         India’s first all-in-one agriculture services platform. Organizing the sector digitally to
                         empower the rural ecosystem.
                     </p>
+                    <div class="flex gap-4 pt-4">
+                        <a href="https://www.facebook.com/share/1Ktxk7o4vo/" target="_blank"
+                            class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-primary transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/agrivaan?igsh=Mmw3cGVwdHYzejR1" target="_blank"
+                            class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-primary transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="https://youtube.com/@agrivaan?si=F4WCAd5yo-cWvBBY" target="_blank"
+                            class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-primary transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                                </path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank"
+                            class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-primary transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
 
                 <div>

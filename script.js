@@ -27,7 +27,7 @@ window.addEventListener('load', () => {
             loader.style.display = 'none';
         }, 1000); // Matches the 1s duration of the transition
 
-    }, 3000);
+    }, 1000);
 });
 
 // Navbar scroll effect
@@ -116,6 +116,26 @@ const checkImpact = () => {
 };
 
 window.addEventListener('scroll', checkImpact);
+
+// About Section Video Autoplay
+const aboutSection = document.getElementById('about');
+const aboutVideo = document.getElementById('about-video');
+let videoPlayed = false;
+
+const checkAboutVideo = () => {
+    if (!aboutSection || !aboutVideo || videoPlayed) return;
+
+    const rect = aboutSection.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.75) {
+        videoPlayed = true;
+        setTimeout(() => {
+            aboutVideo.play().catch(err => console.log("Video autoplay blocked:", err));
+        }, 3000);
+    }
+};
+
+window.addEventListener('scroll', checkAboutVideo);
+window.addEventListener('load', checkAboutVideo);
 
 // Active Link Highlighting (Scroll Spy)
 const sections = document.querySelectorAll('section');

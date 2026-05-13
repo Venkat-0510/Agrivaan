@@ -4,7 +4,8 @@
     --accent: #B8860B;
 }
 
-html, body {
+html,
+body {
     overflow-x: hidden;
     width: 100%;
     margin: 0;
@@ -212,4 +213,18 @@ html, body {
 
 .floating {
     animation: float 6s ease-in-out infinite;
+}
+
+/* Bot specific floating */
+#agrivaan-bot {
+    animation: bot-float 4s ease-in-out infinite;
+}
+
+@keyframes bot-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
 }

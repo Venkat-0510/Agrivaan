@@ -105,7 +105,7 @@
                 <i data-lucide="home" class="w-5 h-5"></i>
                 Home
             </a>
-            <a href="#about" class="mobile-link">
+            <a href="#about" class="mobile-link">   
                 <i data-lucide="info" class="w-5 h-5"></i>
                 About
             </a>
@@ -851,6 +851,31 @@
             </div>
         </div>
     </footer>
+
+    <!-- Floating Chat Bot (WhatsApp Redirect) -->
+    <a href="https://wa.me/917795406351?text=Hello%20Agrivaan,%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" id="agrivaan-bot" class="fixed bottom-10 right-6 sm:right-10 z-[100] group">
+        <div class="relative cursor-pointer transition-all duration-500 hover:scale-110 active:scale-95">
+            <!-- Animated Ping Background -->
+            <span class="absolute inset-0 rounded-full bg-primary/20 animate-ping"></span>
+            
+            <!-- Bot Container -->
+            <div class="relative w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-full shadow-[0_15px_50px_rgba(0,0,0,0.15)] flex items-center justify-center p-1 border-2 border-primary/10 group-hover:border-primary transition-colors duration-500 overflow-hidden">
+                <img src="bot icon/image.png" alt="Agrivaan Bot" class="w-full h-full object-cover rounded-full">
+            </div>
+
+            <!-- Notification Badge -->
+            <div class="absolute -top-1 -right-1 w-6 h-6 bg-accent text-white text-[10px] font-bold rounded-full flex items-center justify-center shadow-lg border-2 border-white animate-bounce">
+                1
+            </div>
+
+            <!-- Tooltip Message -->
+            <div class="absolute right-full mr-6 top-1/2 -translate-y-1/2 bg-white text-primary px-5 py-3 rounded-2xl shadow-2xl border border-primary/5 whitespace-nowrap opacity-0 translate-x-6 pointer-events-none group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 font-bold flex items-center gap-3 hidden md:flex">
+                <span class="w-2 h-2 bg-secondary rounded-full animate-pulse"></span>
+                Chat with us on WhatsApp!
+                <div class="absolute top-1/2 -right-2 -translate-y-1/2 border-[8px] border-transparent border-l-white"></div>
+            </div>
+        </div>
+    </a>
 
     <!-- Scripts -->
     <script src="script.js"></script>

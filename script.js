@@ -217,4 +217,122 @@ if (contactForm) {
     });
 }
 
+// Swiper Gallery Initialization
+let gallerySwiper;
+if (typeof Swiper !== 'undefined') {
+    gallerySwiper = new Swiper('.gallerySwiper', {
+        slidesPerView: 1.2,
+        spaceBetween: 20,
+        loop: true,
+        speed: 3000,
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+        navigation: {
+            nextEl: '.gallery-next',
+            prevEl: '.gallery-prev',
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+            1280: {
+                slidesPerView: 5,
+                spaceBetween: 30,
+            },
+        },
+    });
 
+
+    const techTeamSwiper = new Swiper('.techTeamSwiper', {
+        slidesPerView: 1.2,
+        spaceBetween: 20,
+        loop: false,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+        breakpoints: {
+            640: { slidesPerView: 2, spaceBetween: 20 },
+            768: { slidesPerView: 3, spaceBetween: 30 },
+            1024: { slidesPerView: 4, spaceBetween: 30 },
+        },
+    });
+}
+
+// Lightbox Logic
+const lightboxImages = [
+    'gallery1.png',
+    'gallery2.png',
+    'gallery3.png',
+    'gallery4.png',
+    'gallery5.png',
+    'gallery6.png'
+];
+let currentLightboxIndex = 0;
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxContent = document.getElementById('lightbox-content');
+
+window.openLightbox = (src, index) => {
+    currentLightboxIndex = index;
+    lightboxImg.src = src;
+    lightbox.classList.remove('opacity-0', 'pointer-events-none');
+    setTimeout(() => {
+        lightboxContent.classList.remove('scale-95');
+        lightboxContent.classList.add('scale-100');
+    }, 50);
+    document.body.style.overflow = 'hidden';
+};
+
+window.closeLightbox = () => {
+    lightboxContent.classList.remove('scale-100');
+    lightboxContent.classList.add('scale-95');
+    setTimeout(() => {
+        lightbox.classList.add('opacity-0', 'pointer-events-none');
+        lightboxImg.src = '';
+    }, 300);
+    document.body.style.overflow = 'auto';
+};
+
+window.prevLightboxImage = (e) => {
+    if(e) e.stopPropagation();
+    currentLightboxIndex = (currentLightboxIndex - 1 + lightboxImages.length) % lightboxImages.length;
+    updateLightboxImage();
+};
+
+window.nextLightboxImage = (e) => {
+    if(e) e.stopPropagation();
+    currentLightboxIndex = (currentLightboxIndex + 1) % lightboxImages.length;
+    updateLightboxImage();
+};
+
+const updateLightboxImage = () => {
+    lightboxImg.style.opacity = '0';
+    lightboxImg.style.transition = 'opacity 0.2s';
+    setTimeout(() => {
+        lightboxImg.src = lightboxImages[currentLightboxIndex];
+        lightboxImg.style.opacity = '1';
+    }, 200);
+};
+
+// Keyboard navigation for lightbox
+document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('opacity-0')) {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') prevLightboxImage();
+        if (e.key === 'ArrowRight') nextLightboxImage();
+    }
+});

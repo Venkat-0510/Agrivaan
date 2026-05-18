@@ -259,6 +259,7 @@ if (typeof Swiper !== 'undefined') {
         slidesPerView: 1.2,
         spaceBetween: 20,
         loop: false,
+        centerInsufficientSlides: true,
         autoplay: {
             delay: 3000,
             disableOnInteraction: false,
@@ -267,7 +268,7 @@ if (typeof Swiper !== 'undefined') {
         breakpoints: {
             640: { slidesPerView: 2, spaceBetween: 20 },
             768: { slidesPerView: 3, spaceBetween: 30 },
-            1024: { slidesPerView: 4, spaceBetween: 30 },
+            1024: { slidesPerView: 3, spaceBetween: 30 },
         },
     });
 }

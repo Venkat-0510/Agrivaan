@@ -1,36 +1,40 @@
 // Loading Screen Animation
-window.addEventListener('load', () => {
+const startLoaderTransition = () => {
     const loader = document.getElementById('loader');
     const loaderLogo = document.getElementById('loader-logo');
     const navLogo = document.getElementById('nav-logo');
 
-    if (loader && loaderLogo && navLogo) {
-        // 1. Wait for 1 second before starting transition
+    if (loader && loaderLogo && navLogo && !loader.classList.contains('opacity-0')) {
+        // Get target position (Navbar Logo)
+        const targetRect = navLogo.getBoundingClientRect();
+        const loaderRect = loaderLogo.getBoundingClientRect();
+
+        // Calculate scales and translations
+        const scaleX = targetRect.width / loaderRect.width;
+        const scaleY = targetRect.height / loaderRect.height;
+        const translateX = targetRect.left - loaderRect.left + (targetRect.width - loaderRect.width) / 2;
+        const translateY = targetRect.top - loaderRect.top + (targetRect.height - loaderRect.height) / 2;
+
+        // Perform the animation
+        loaderLogo.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scaleX})`;
+        loader.classList.add('opacity-0');
+        loader.style.pointerEvents = 'none';
+
+        // Reveal the actual nav logo and remove loader
         setTimeout(() => {
-            // 2. Get target position (Navbar Logo)
-            const targetRect = navLogo.getBoundingClientRect();
-            const loaderRect = loaderLogo.getBoundingClientRect();
-
-            // 3. Calculate scales and translations
-            const scaleX = targetRect.width / loaderRect.width;
-            const scaleY = targetRect.height / loaderRect.height;
-            const translateX = targetRect.left - loaderRect.left + (targetRect.width - loaderRect.width) / 2;
-            const translateY = targetRect.top - loaderRect.top + (targetRect.height - loaderRect.height) / 2;
-
-            // 4. Perform the animation
-            loaderLogo.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scaleX})`;
-            loader.classList.add('opacity-0');
-            loader.style.pointerEvents = 'none';
-
-            // 5. Reveal the actual nav logo and remove loader
-            setTimeout(() => {
-                navLogo.classList.remove('opacity-0');
-                navLogo.style.opacity = '1';
-                loader.style.display = 'none';
-            }, 1000); // Matches the 1s duration of the transition
-
-        }, 1000);
+            navLogo.classList.remove('opacity-0');
+            navLogo.style.opacity = '1';
+            loader.style.display = 'none';
+        }, 800); // 800ms transition duration
     }
+};
+
+// Force start transition after 1.2 seconds, or immediately on window load (whichever is faster)
+const loaderTimeout = setTimeout(startLoaderTransition, 1200);
+
+window.addEventListener('load', () => {
+    clearTimeout(loaderTimeout);
+    setTimeout(startLoaderTransition, 100);
 });
 
 // Navbar scroll effect
@@ -89,45 +93,7 @@ const revealOnScroll = () => {
 window.addEventListener('scroll', revealOnScroll);
 revealOnScroll(); // Initial check
 
-// Stats Counter Animation
-const counters = document.querySelectorAll('.stat-counter');
-let counterStarted = false;
 
-const startCounters = () => {
-    if (counterStarted) return;
-
-    counters.forEach(counter => {
-        const target = +counter.getAttribute('data-target');
-        const increment = target / 50; // Speed of counting
-
-        const updateCount = () => {
-            const count = +counter.innerText;
-            if (count < target) {
-                counter.innerText = Math.ceil(count + increment);
-                setTimeout(updateCount, 40);
-            } else {
-                counter.innerText = target.toLocaleString() + '+';
-            }
-        };
-        updateCount();
-    });
-    counterStarted = true;
-};
-
-// Start counters when impact section is visible
-const impactSection = document.getElementById('impact');
-const checkImpact = () => {
-    if (!impactSection) return;
-    const rect = impactSection.getBoundingClientRect();
-    if (rect.top < window.innerHeight * 0.8) {
-        startCounters();
-    }
-};
-
-if (impactSection) {
-    window.addEventListener('scroll', checkImpact);
-    checkImpact(); // Check immediately on load
-}
 
 // About Section Video Autoplay
 const aboutSection = document.getElementById('about');
@@ -298,10 +264,14 @@ let techTeamSwiper;
 if (typeof Swiper !== 'undefined') {
     if (document.querySelector('.gallerySwiper')) {
         gallerySwiper = new Swiper('.gallerySwiper', {
-            slidesPerView: 1.2,
-            spaceBetween: 20,
+            slidesPerView: 1.5,
+            spaceBetween: 16,
             loop: true,
-            speed: 3000,
+            speed: 4000,
+            freeMode: {
+                enabled: true,
+                momentum: false,
+            },
             autoplay: {
                 delay: 0,
                 disableOnInteraction: false,
@@ -312,8 +282,8 @@ if (typeof Swiper !== 'undefined') {
                 prevEl: '.gallery-prev',
             },
             breakpoints: {
-                640: { slidesPerView: 2, spaceBetween: 20 },
-                768: { slidesPerView: 3, spaceBetween: 30 },
+                480: { slidesPerView: 2, spaceBetween: 20 },
+                768: { slidesPerView: 3, spaceBetween: 24 },
                 1024: { slidesPerView: 4, spaceBetween: 30 },
                 1280: { slidesPerView: 5, spaceBetween: 30 },
             },
@@ -344,7 +314,7 @@ if (typeof Swiper !== 'undefined') {
 const lightboxImages = [
     'gallery1.png',
     'gallery2.png',
-    'gallery3.png',
+    'galley3.png',
     'gallery4.png',
     'gallery5.png',
     'gallery6.png'

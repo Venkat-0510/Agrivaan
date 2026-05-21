@@ -315,9 +315,7 @@ const lightboxImages = [
     'gallery1.png',
     'gallery2.png',
     'galley3.png',
-    'gallery4.png',
-    'gallery5.png',
-    'gallery6.png'
+    'gallery4.png'
 ];
 let currentLightboxIndex = 0;
 

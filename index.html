@@ -47,7 +47,7 @@
     <div id="loader"
         class="fixed inset-0 bg-[#f4fbf4] z-[100] flex flex-col items-center justify-between pb-16 pt-20 transition-opacity duration-500 overflow-hidden">
         <div
-            class="absolute inset-0 z-0 opacity-80 bg-[url('splashscreen.png')] bg-no-repeat bg-center bg-cover pointer-events-none blur-[2px] brightness-[1.05] contrast-[0.95] scale-105">
+            class="absolute inset-0 z-0 opacity-80 bg-[url('assets/images/logo/splashscreen.png')] bg-no-repeat bg-center bg-cover pointer-events-none blur-[2px] brightness-[1.05] contrast-[0.95] scale-105">
         </div>
         <div
             class="absolute inset-0 z-0 pointer-events-none opacity-[0.05] overflow-hidden flex items-center justify-center">
@@ -60,7 +60,7 @@
         <div class="absolute inset-0 z-0 pointer-events-none backdrop-blur-[2px]"
             style="background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(230,255,230,0.4) 100%);"></div>
         <div class="flex-1 flex flex-col items-center justify-center relative z-10 w-full mt-10">
-            <img id="loader-logo" src="logo.png" alt="Agrivaan Logo"
+            <img id="loader-logo" src="assets/images/logo/logo.png" alt="Agrivaan Logo"
                 class="w-48 sm:w-56 lg:w-64 h-auto mix-blend-multiply transition-all duration-[1200ms] cubic-bezier(0.7, 0, 0.3, 1)">
         </div>
         <div class="flex flex-col items-center relative z-10 mb-6">
@@ -81,7 +81,7 @@
             <nav
                 class="flex items-center justify-between bg-white/70 backdrop-blur-md border border-white/20 rounded-full px-4 sm:px-6 py-2 shadow-lg">
                 <div class="flex items-center gap-2">
-                    <img id="nav-logo" src="logo.png" alt="Agrivaan Logo"
+                    <img id="nav-logo" src="assets/images/logo/logo.png" alt="Agrivaan Logo"
                         class="h-10 sm:h-16 w-auto opacity-0 transition-opacity duration-300">
                 </div>
 
@@ -157,7 +157,7 @@
         <!-- Hero Section -->
         <section id="hero" class="relative min-h-screen flex items-center pt-24 overflow-hidden">
             <div class="absolute inset-0 z-0">
-                <img src="hero.png" alt="Agriculture Background" class="w-full h-full object-cover">
+                <img src="assets/images/hero/hero.png" alt="Agriculture Background" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
             </div>
 
@@ -235,7 +235,7 @@
                     <div
                         class="relative reveal-right order-1 lg:order-2 px-4 lg:px-0 mb-8 lg:mb-0 h-full min-h-[400px]">
                         <div class="relative z-10 rounded-3xl lg:rounded-4xl overflow-hidden shadow-2xl h-full">
-                            <video id="about-video" src="video.mp4" muted loop playsinline
+                            <video id="about-video" src="assets/videos/video.mp4" muted loop playsinline
                                 class="w-full h-full object-cover"></video>
                         </div>
                     </div>
@@ -447,7 +447,7 @@
                             "Founded by Sudarshan and his team to transform Indian agriculture through technology."
                         </p>
                         <div class="flex items-center gap-4">
-                            <img src="team.png" alt="Agrivaan Team"
+                            <img src="assets/images/team/team.png" alt="Agrivaan Team"
                                 class="w-20 h-20 rounded-full object-cover border-2 border-primary/20 bg-white">
                             <div>
                                 <div class="font-bold text-gray-900 text-base sm:text-lg">Agrivaan Founder and Team
@@ -494,8 +494,8 @@
                         <!-- Slide 1 -->
                         <div class="swiper-slide">
                             <div class="group relative rounded-3xl overflow-hidden h-[300px] md:h-[400px] shadow-lg transition-transform duration-500 bg-white border border-gray-100 hover:shadow-xl hover:shadow-primary/10"
-                                onclick="openLightbox('gallery1.png', 0)">
-                                <img src="gallery1.png" alt="Farmers"
+                                onclick="openLightbox('assets/images/gallery/gallery1.png', 0)">
+                                <img src="assets/images/gallery/gallery1.png" alt="Farmers"
                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
@@ -509,8 +509,8 @@
                         <!-- Slide 2 -->
                         <div class="swiper-slide">
                             <div class="group relative rounded-3xl overflow-hidden h-[300px] md:h-[400px] shadow-lg transition-transform duration-500 bg-white border border-gray-100 hover:shadow-xl hover:shadow-primary/10"
-                                onclick="openLightbox('gallery2.png', 1)">
-                                <img src="gallery2.png" alt="Machinery"
+                                onclick="openLightbox('assets/images/gallery/gallery2.png', 1)">
+                                <img src="assets/images/gallery/gallery2.png" alt="Machinery"
                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
@@ -524,8 +524,8 @@
                         <!-- Slide 3 -->
                         <div class="swiper-slide">
                             <div class="group relative rounded-3xl overflow-hidden h-[300px] md:h-[400px] shadow-lg transition-transform duration-500 bg-white border border-gray-100 hover:shadow-xl hover:shadow-primary/10"
-                                onclick="openLightbox('galley3.png', 2)">
-                                <img src="galley3.png" alt="Marketplace"
+                                onclick="openLightbox('assets/images/gallery/gallery3.png', 2)">
+                                <img src="assets/images/gallery/gallery3.png" alt="Marketplace"
                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
@@ -539,8 +539,8 @@
                         <!-- Slide 4 -->
                         <div class="swiper-slide">
                             <div class="group relative rounded-3xl overflow-hidden h-[300px] md:h-[400px] shadow-lg transition-transform duration-500 bg-white border border-gray-100 hover:shadow-xl hover:shadow-primary/10"
-                                onclick="openLightbox('gallery4.png', 3)">
-                                <img src="gallery4.png" alt="Logistics"
+                                onclick="openLightbox('assets/images/gallery/gallery4.png', 3)">
+                                <img src="assets/images/gallery/gallery4.png" alt="Logistics"
                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
@@ -779,7 +779,7 @@
         <!-- Page Header Banner -->
         <section class="relative bg-gradient-to-r from-primary to-secondary pt-32 pb-20 text-white overflow-hidden">
             <div
-                class="absolute inset-0 opacity-10 bg-[url('splashscreen.png')] bg-no-repeat bg-center bg-cover pointer-events-none blur-[1px]">
+                class="absolute inset-0 opacity-10 bg-[url('assets/images/logo/splashscreen.png')] bg-no-repeat bg-center bg-cover pointer-events-none blur-[1px]">
             </div>
             <div class="absolute inset-0 bg-black/10 z-0"></div>
             <div class="container mx-auto px-6 lg:px-12 relative z-10 text-center lg:text-left">
@@ -815,7 +815,7 @@
                             class="bg-white p-6 rounded-3xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 border border-gray-100 flex items-center gap-6 group w-full md:w-[calc(50%-12px)] lg:w-[calc(33.33%-16px)] max-w-md">
                             <div
                                 class="w-24 h-24 rounded-full overflow-hidden ring-4 ring-primary/10 group-hover:ring-primary/30 transition-all duration-300 flex-shrink-0">
-                                <img src="founder.png" alt="Sudarshan M L"
+                                <img src="assets/images/team/founder.png" alt="Sudarshan M L"
                                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             </div>
                             <div>
@@ -828,7 +828,7 @@
                             class="bg-white p-6 rounded-3xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 border border-gray-100 flex items-center gap-6 group w-full md:w-[calc(50%-12px)] lg:w-[calc(33.33%-16px)] max-w-md">
                             <div
                                 class="w-24 h-24 rounded-full overflow-hidden ring-4 ring-primary/10 group-hover:ring-primary/30 transition-all duration-300 flex-shrink-0">
-                                <img src="dhanush.png" alt="Dhanush R"
+                                <img src="assets/images/team/dhanush.png" alt="Dhanush R"
                                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             </div>
                             <div>
@@ -841,7 +841,7 @@
                             class="bg-white p-6 rounded-3xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 border border-gray-100 flex items-center gap-6 group w-full md:w-[calc(50%-12px)] lg:w-[calc(33.33%-16px)] max-w-md">
                             <div
                                 class="w-24 h-24 rounded-full overflow-hidden ring-4 ring-primary/10 group-hover:ring-primary/30 transition-all duration-300 flex-shrink-0">
-                                <img src="ramaswamy.png" alt="Ramaswamy"
+                                <img src="assets/images/team/ramaswamy.png" alt="Ramaswamy"
                                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             </div>
                             <div>
@@ -854,7 +854,7 @@
                             class="bg-white p-6 rounded-3xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 border border-gray-100 flex items-center gap-6 group w-full md:w-[calc(50%-12px)] lg:w-[calc(33.33%-16px)] max-w-md">
                             <div
                                 class="w-24 h-24 rounded-full overflow-hidden ring-4 ring-primary/10 group-hover:ring-primary/30 transition-all duration-300 flex-shrink-0">
-                                <img src="anand.png" alt="Anand S G"
+                                <img src="assets/images/team/anand.png" alt="Anand S G"
                                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             </div>
                             <div>
@@ -867,7 +867,7 @@
                             class="bg-white p-6 rounded-3xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 border border-gray-100 flex items-center gap-6 group w-full md:w-[calc(50%-12px)] lg:w-[calc(33.33%-16px)] max-w-md">
                             <div
                                 class="w-24 h-24 rounded-full overflow-hidden ring-4 ring-primary/10 group-hover:ring-primary/30 transition-all duration-300 flex-shrink-0">
-                                <img src="rajesh.png" alt="Rajesh"
+                                <img src="assets/images/team/rajesh.png" alt="Rajesh"
                                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             </div>
                             <div>
@@ -940,7 +940,7 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <div class="space-y-6">
                     <div class="flex items-center gap-2">
-                        <img src="logo.png" alt="Agrivaan Logo" class="h-32 w-auto brightness-0 invert opacity-90">
+                        <img src="assets/images/logo/logo.png" alt="Agrivaan Logo" class="h-32 w-auto brightness-0 invert opacity-90">
                     </div>
                     <p class="text-gray-400">
                         India’s first all-in-one agriculture services platform. Organizing the sector digitally to
@@ -1037,7 +1037,7 @@
             <span class="absolute inset-0 rounded-full bg-primary/20 animate-ping"></span>
             <div
                 class="relative w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-full shadow-[0_15px_50px_rgba(0,0,0,0.15)] flex items-center justify-center p-1 border-2 border-primary/10 group-hover:border-primary transition-colors duration-500 overflow-hidden">
-                <img src="bot icon/image.png" alt="Agrivaan Bot" class="w-full h-full object-cover rounded-full">
+                <img src="assets/icons/bot_icon.png" alt="Agrivaan Bot" class="w-full h-full object-cover rounded-full">
             </div>
             <div
                 class="absolute -top-1 -right-1 w-6 h-6 bg-accent text-white text-[10px] font-bold rounded-full flex items-center justify-center shadow-lg border-2 border-white animate-bounce">

@@ -312,10 +312,10 @@ if (typeof Swiper !== 'undefined') {
 
 // Lightbox Logic
 const lightboxImages = [
-    'gallery1.png',
-    'gallery2.png',
-    'galley3.png',
-    'gallery4.png'
+    'assets/images/gallery/gallery1.png',
+    'assets/images/gallery/gallery2.png',
+    'assets/images/gallery/gallery3.png',
+    'assets/images/gallery/gallery4.png'
 ];
 let currentLightboxIndex = 0;
 
